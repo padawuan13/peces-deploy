@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MPSitio.Master.cs" Inherits="PeCesConcepcion.MPSitio" %>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - PeCesConcepcion</title>
+    <link href="Content/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <asp:Image ID="imgLogo" runat="server" ImageUrl="~/Images/LogoEmpresa.png" AlternateText="Logo de la Empresa" />
+            <nav>
+                <ul>
+                    <li><asp:HyperLink ID="lnkHome" runat="server" NavigateUrl="~/Home.aspx">Inicio</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="lnkListaTickets" runat="server" NavigateUrl="~/ListaTickets.aspx">Lista de Tickets</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="lnkAgregarTicket" runat="server" NavigateUrl="~/AgregarTicket.aspx">Agregar Ticket</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="lnkAcercaDe" runat="server" NavigateUrl="~/AcercaDe.aspx">Acerca de</asp:HyperLink></li>
+                </ul>
+            </nav>
+        </div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
